@@ -1,0 +1,165 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\DianZiCeShiData\霍尔磁场检测工程\gaiban - 副本 (2)\STC_Demo.uvproj
+Project File Date:  05/24/2022
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(28): warning C206: 'GetHallAct': missing function-prototype
+source\main.c(28): error C202: 'enumHallGetClose': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(40): warning C206: 'SetBeep': missing function-prototype
+source\main.c(40): error C267: 'SetBeep': requires ANSI-style prototype
+source\main.c(103): error C141: syntax error near 'unsigned'
+source\main.c(103): error C202: 'low4': undefined identifier
+source\main.c(106): error C202: 'low4': undefined identifier
+source\main.c(109): error C202: 'low4': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(31): warning C206: 'SetBeep': missing function-prototype
+source\main.c(31): error C267: 'SetBeep': requires ANSI-style prototype
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=43.1 xdata=126 code=2850
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(54): error C193: '--': illegal operation on bit(s)
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(54): error C193: '-': bad operand type
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(54): error C193: '--': illegal operation on bit(s)
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2869
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+source\main.c(34): error C141: syntax error near ';'
+source\main.c(35): error C141: syntax error near '}'
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=45.0 xdata=126 code=2865
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 3 Warning(s).

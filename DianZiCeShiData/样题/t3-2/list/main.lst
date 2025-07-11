@@ -1,0 +1,39 @@
+C51 COMPILER V9.51   MAIN                                                                  07/04/2025 09:02:50 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT
+                    -(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"
+   2          #include "sys.H"
+   3          #include "beep.H"
+   4           
+   5          code unsigned long SysClock=11059200;
+   6           
+   7          int main(){
+   8   1        
+   9   1        BeepInit();
+  10   1        SetBeep(1000,150);
+  11   1        MySTC_Init();
+  12   1        while(1)
+  13   1          MySTC_OS();
+  14   1       
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     22    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

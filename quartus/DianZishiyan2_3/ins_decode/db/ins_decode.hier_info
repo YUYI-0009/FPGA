@@ -1,0 +1,37 @@
+|ins_decode
+en => halt~2.OUTPUTSELECT
+en => in1~2.OUTPUTSELECT
+en => movi~2.OUTPUTSELECT
+en => out1~2.OUTPUTSELECT
+en => jg~4.OUTPUTSELECT
+en => sub~4.OUTPUTSELECT
+en => add~3.OUTPUTSELECT
+en => jmp~2.OUTPUTSELECT
+en => movd~3.OUTPUTSELECT
+en => mova~2.OUTPUTSELECT
+en => movc~2.OUTPUTSELECT
+en => movb~1.OUTPUTSELECT
+ir[0] => Equal2.IN1
+ir[0] => Equal3.IN0
+ir[0] => Equal4.IN0
+ir[1] => Equal2.IN0
+ir[1] => Equal3.IN1
+ir[1] => Equal4.IN1
+ir[2] => Equal0.IN0
+ir[2] => Equal1.IN1
+ir[3] => Equal0.IN1
+ir[3] => Equal1.IN0
+add <= add~3.DB_MAX_OUTPUT_PORT_TYPE
+sub <= sub~4.DB_MAX_OUTPUT_PORT_TYPE
+mova <= mova~2.DB_MAX_OUTPUT_PORT_TYPE
+movb <= movb~1.DB_MAX_OUTPUT_PORT_TYPE
+jmp <= jmp~2.DB_MAX_OUTPUT_PORT_TYPE
+jg <= jg~4.DB_MAX_OUTPUT_PORT_TYPE
+in1 <= in1~2.DB_MAX_OUTPUT_PORT_TYPE
+movd <= movd~3.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= out1~2.DB_MAX_OUTPUT_PORT_TYPE
+movc <= movc~2.DB_MAX_OUTPUT_PORT_TYPE
+movi <= movi~2.DB_MAX_OUTPUT_PORT_TYPE
+halt <= halt~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

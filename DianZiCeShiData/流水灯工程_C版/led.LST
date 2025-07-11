@@ -1,0 +1,97 @@
+C51 COMPILER V9.51   LED                                                                   07/01/2025 10:03:30 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE LED
+OBJECT MODULE PLACED IN led.OBJ
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE led.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<STC15F2K60S2.H>
+   2          #define uchar unsigned char
+   3          #define uint unsigned int
+   4          sbit led_sel=P2^3;//P2^3----E3
+   5          sbit  a = P3^5;
+   6          sbit  b = P3^4;
+   7          uchar led;
+   8          
+   9          void Init(){
+  10   1      
+  11   1        P0M1=0x00;
+  12   1        P0M0=0xff;
+  13   1      
+  14   1        P2M1=0x00;
+  15   1        P2M0=0x08;
+  16   1      
+  17   1        led_sel=1;  
+  18   1        a = 0;
+  19   1        b = 0;
+  20   1      }
+  21          
+  22          //延时函数可以在STC-ISP中通过“软件延时计算器”功能自动生成指定演示时间的延时函数代码
+  23          //下为生成1ms的延时函数，通过传入参数n，函数可以延时n毫秒
+  24          void delay_ms(uint n)   
+  25          {
+  26   1        while(n){
+  27   2        uchar i, j;
+  28   2        i = 11;
+  29   2        j = 190;
+  30   2        do
+  31   2        {
+  32   3          while (--j);
+  33   3        } while (--i);
+  34   2        n--;
+  35   2      }
+  36   1      }
+  37          
+  38          void Delay200ms()   //@11.0592MHz
+  39          {
+  40   1        unsigned char i, j, k;
+  41   1      
+  42   1        //_nop_();
+  43   1        //_nop_();
+  44   1        i = 9;
+  45   1        j = 104;
+  46   1        k = 139;
+  47   1        do
+  48   1        {
+  49   2          do
+  50   2          {
+  51   3            while (--k);
+  52   3          } while (--j);
+  53   2        } while (--i);
+  54   1      }
+  55          
+C51 COMPILER V9.51   LED                                                                   07/01/2025 10:03:30 PAGE 2   
+
+  56          
+  57          void main()
+  58          {
+  59   1        Init();
+  60   1        led=0x01;
+  61   1        while(1)
+  62   1        {
+  63   2          P0=led;
+  64   2          //delay_ms(200);
+  65   2          Delay200ms(); //延时200ms 
+  66   2          if(led==0x80)
+  67   2            led=0x01;
+  68   2          else
+  69   2            led=led<<1;
+  70   2        }
+  71   1        
+  72   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     84    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

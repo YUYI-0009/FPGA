@@ -1,0 +1,15 @@
+F:/DianZiCeShiData/fsm/fsm.v {1 {vlog -work work -novopt -stats=none F:/DianZiCeShiData/fsm/fsm.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fsm
+
+Top level modules:
+	fsm
+
+} {} {}} F:/DianZiCeShiData/fsm/fsm_tb.v {1 {vlog -work work -novopt -stats=none F:/DianZiCeShiData/fsm/fsm_tb.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fsm_tb
+
+Top level modules:
+	fsm_tb
+
+} {} {}}

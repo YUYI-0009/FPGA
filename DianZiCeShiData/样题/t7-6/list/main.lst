@@ -1,0 +1,48 @@
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 09:20:12 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT
+                    -(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"
+   2          #include "sys.H"
+   3          #include "beep.H"   
+   4          #include "Vib.h"
+   5           
+   6          code unsigned long SysClock=11059200;
+   7           
+   8          void mysv_callback()
+   9          {
+  10   1        if(GetVibAct()==enumVibQuake)
+  11   1          SetBeep(1200,100);
+  12   1      }
+  13           
+  14           
+  15          void main(){
+  16   1        
+  17   1        BeepInit();
+  18   1        VibInit();
+  19   1        SetEventCallBack(enumEventVib, mysv_callback);
+  20   1        MySTC_Init();
+  21   1        while(1)
+  22   1          MySTC_OS();
+  23   1        
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     43    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

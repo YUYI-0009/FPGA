@@ -1,0 +1,11 @@
+module mux2_1(
+	input wire [7:0] a,b,
+	input wire s,
+	output reg [7:0] y
+);
+ always @(s) begin
+	if(s==1'b0) y=a;
+	else y=b;
+	end
+endmodule
+	

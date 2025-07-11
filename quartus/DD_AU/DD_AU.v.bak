@@ -1,0 +1,8 @@
+module DD_AU(intput wire au_en,
+input wire [3:0] ac,
+input wire a,b,
+output reg gf,output reg [7:0] t);
+always @(au_en or ac or a or b) begin
+t=8'b00000000;
+gf=1'b0;
+if(au_en)

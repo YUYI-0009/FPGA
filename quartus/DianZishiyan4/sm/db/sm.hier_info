@@ -1,0 +1,6 @@
+|sm
+sm_en => t.ENA
+sm <= t.DB_MAX_OUTPUT_PORT_TYPE
+clk => t.CLK
+
+

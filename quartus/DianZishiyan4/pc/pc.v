@@ -1,0 +1,14 @@
+module pc(
+input wire in_pc,clk,
+input wire ld_pc,
+output reg [7:0] c=8'b00000000,
+input wire [7:0] a
+);
+always @(negedge clk)
+begin 
+if(ld_pc==1'b1&&in_pc==1'b0) 
+c<=a;
+else if(ld_pc==1'b0&&in_pc==1'b1)
+c<=c+8'b00000001;
+end
+endmodule

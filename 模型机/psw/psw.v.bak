@@ -1,0 +1,10 @@
+module psw(
+	input wire g_en,g,clk,
+	output reg gf
+);
+always @(negedge clk)
+	begin
+	if(g_en==1'b1) gf<=g;
+	end
+endmodule
+	

@@ -1,0 +1,81 @@
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 09:20:30 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT
+                    -(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"
+   2          #include "sys.H"
+   3          #include "hall.H" 
+   4          #include "displayer.H" 
+   5           
+   6          code unsigned long SysClock=11059200L;
+   7          #ifdef _displayer_H_                         
+   8          code char decode_table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x00,0x08,0x40,0x01,0x76,0x38}
+             -;   
+   9                           /* 序号:   0    1    2    3    4    5    6    7    8    9    10     11  12   13   14   1
+             -5  */
+  10                             /* 显示:   0    1    2    3    4    5    6    7    8    9    (无)   下-  中-  上-
+             -   H    L  */ 
+  11          #endif
+  12           
+  13          char ch[8]={0x0f,0x1e,0x3c,0x78,0xf0,0xe1,0xc3,0x87};
+  14          int sum=0;
+  15          char flag=0;
+  16           
+  17          void my100mS_callback(){
+  18   1        if(flag){
+  19   2          if(sum==8) {
+  20   3          sum=0;
+  21   3          }
+  22   2          LedPrint(ch[sum]);
+  23   2          sum++;
+  24   2        }
+  25   1        else{
+  26   2          LedPrint(0);
+  27   2          sum=0;
+  28   2        }
+  29   1        
+  30   1      }
+  31           
+  32          void myhall(){
+  33   1        if(GetHallAct()==enumHallGetClose){
+  34   2          flag=1;
+  35   2        }
+  36   1        else{
+  37   2          flag=0;
+  38   2        }   
+  39   1      }
+  40           
+  41          void main(){
+  42   1        DisplayerInit();  
+  43   1        HallInit(); 
+  44   1        SetDisplayerArea(0,7);
+  45   1        Seg7Print(10,10,10,10,10,10,10,10);
+  46   1        LedPrint(0);
+  47   1        SetEventCallBack(enumEventSys100mS, my100mS_callback);
+  48   1        SetEventCallBack(enumEventHall, myhall);
+  49   1        MySTC_Init();
+  50   1        while(1)
+  51   1          MySTC_OS();
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 09:20:30 PAGE 2   
+
+  52   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    132    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     11    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

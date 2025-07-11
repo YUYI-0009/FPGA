@@ -1,0 +1,70 @@
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 09:21:07 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT
+                    -(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"
+   2          #include "sys.H"
+   3          #include "displayer.H"  
+   4           
+   5          code unsigned long SysClock=11059200;
+   6           
+   7          #ifdef _displayer_H_
+   8          code char decode_table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x00,0x08,0x40,0x01,0x76,0x38}
+             -;   
+   9                          /* 序号:   0    1    2    3    4    5    6    7    8    9    10     11   12   13   14   1
+             -5  */
+  10                          /* 显示:   0    1    2    3    4    5    6    7    8    9    (无)   下-  中-  上-   
+             -H    L  */  
+  11          #endif
+  12           
+  13          long min=0,sec=0,ms=0,temp=0;
+  14          char oput[8]={0};
+  15           
+  16          void fun(){
+  17   1        temp++;
+  18   1        ms=temp;
+  19   1        sec=(temp/1000)%60;
+  20   1        min=temp/60000;
+  21   1        oput[0]=ms%10;
+  22   1        oput[1]=(ms/10)%10;
+  23   1        oput[2]=(ms/100)%10;
+  24   1        oput[3]=12;
+  25   1        oput[4]=sec%10;
+  26   1        oput[5]=(sec/10)%10;
+  27   1        oput[6]=12;
+  28   1        oput[7]=min;
+  29   1        Seg7Print(oput[7],oput[6],oput[5],oput[4],oput[3],oput[2],oput[1],oput[0]);
+  30   1      }
+  31           
+  32          int main(){
+  33   1        DisplayerInit();  
+  34   1        SetDisplayerArea(0,7);
+  35   1        Seg7Print(0,0,0,0,0,0,0,0);
+  36   1        LedPrint(0);
+  37   1        SetEventCallBack(enumEventSys1mS, fun);
+  38   1        MySTC_Init();
+  39   1        while(1)
+  40   1          MySTC_OS();
+  41   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    317    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     24    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 09:21:07 PAGE 2   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

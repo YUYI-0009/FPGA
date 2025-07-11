@@ -1,0 +1,11 @@
+module sm(sm_en,clk,z);
+	input sm_en,clk;
+	output z;
+	reg t=1'b0;
+	always @(negedge clk)
+	begin
+	if(sm_en==1'b1)
+	t<=~t;
+	end
+	assign z=t;
+endmodule 

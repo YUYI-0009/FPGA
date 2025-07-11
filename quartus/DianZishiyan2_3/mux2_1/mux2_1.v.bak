@@ -1,0 +1,5 @@
+module mux2_1(
+	input wire [7:0] a,b,
+	input wire s,
+	output reg [7:0] y
+);

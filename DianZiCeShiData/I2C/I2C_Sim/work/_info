@@ -1,0 +1,84 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Modesim_files/flow_led_tb
+T_opt1
+!s110 1743689544
+VzBMdc]`LezAiG@^PiVRzA1
+Z1 04 6 4 work i2c_tb fast 0
+=1-e02e0b2acf47-67ee9747-3b0-e634
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt1
+Z3 OL;O;10.6d;65
+R0
+vi2c
+Z4 !s110 1744265101
+!i10b 1
+!s100 eG^2R@BGL8e2O>8fI279;1
+IeEh@7RolzV8_MENH7YO372
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 dF:/Modesim_files/I2C/I2C_Sim
+w1744261192
+8../I2C_Rtl/i2c.v
+F../I2C_Rtl/i2c.v
+L0 2
+Z7 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z8 !s108 1744265101.000000
+Z9 !s107 ../I2C_Rtl/i2c.v|../I2C_Tes/M24XXX_Parameters.v|../I2C_Tes/M24XXX_Macro.v|../I2C_Tes/M24XXX_Memory.v|F:/Modesim_files/I2C/I2C_Tes/i2c_tb.v|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/Modesim_files/I2C/I2C_Tes/i2c_tb.v|
+!i113 0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vi2c_tb
+R4
+!i10b 1
+!s100 jg<^K01>JMn@GCoHzY8YQ3
+I92_aEQMO]BCGkGT>3ZIH43
+R5
+R6
+w1744264855
+8F:/Modesim_files/I2C/I2C_Tes/i2c_tb.v
+FF:/Modesim_files/I2C/I2C_Tes/i2c_tb.v
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vM24XXX
+R4
+!i10b 1
+!s100 gEk6^JS^DgleYWf03Q@AG3
+IVZibCPE2[d5QfnElLzJWc3
+R5
+R6
+w1743052777
+8../I2C_Tes/M24XXX_Memory.v
+F../I2C_Tes/M24XXX_Memory.v
+L0 40
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+n@m24@x@x@x

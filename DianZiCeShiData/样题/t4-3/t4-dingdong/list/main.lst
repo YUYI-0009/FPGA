@@ -1,0 +1,69 @@
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 10:33:31 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: F:\DianZiCeShiData\keil\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT
+                    -(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"
+   2          #include "sys.H"
+   3          #include "displayer.H" 
+   4          #include "Beep.H"
+   5          #include "music.H"
+   6           
+   7          code unsigned long SysClock=11059200;
+   8           
+   9          #ifdef _displayer_H_ 
+  10          code char decode_table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x00,0x08,0x40,0x01,0x76,0x38}
+             -;
+  11                           /* 序号:   0    1    2    3    4    5    6    7    8    9    10     11  12   13   14   
+             -15  */
+  12                           /* 显示:   0    1    2    3    4    5    6    7    8    9    (无)   下-  中-  上-  
+             - H    L  */  
+  13           
+  14          #endif
+  15           
+  16          // 修改音乐数据为两声"叮咚"
+  17          code unsigned char arr[]={
+  18              0x31, 0x20,  // "叮" (中音C, 1/2拍)
+  19              0x00, 0x10,  // 休止符 (1/4拍)
+  20              0x35, 0x20,   // "咚" (低音G, 1/2拍)
+  21            0x00, 0x20,
+  22             0x31, 0x20,  // "叮" (中音C, 1/2拍)
+  23              0x00, 0x10,  // 休止符 (1/4拍)
+  24              0x35, 0x20   // "咚" (低音G, 1/2拍)
+  25          };
+  26          
+  27          int main(){
+  28   1          DisplayerInit();
+  29   1          LedPrint(0);
+  30   1          SetDisplayerArea(0,7);
+  31   1          BeepInit();
+  32   1          MusicPlayerInit();
+  33   1          SetPlayerMode(enumModePlay);
+  34   1          SetMusic(100, 0xFA, arr, 14, enumMscDrvSeg7andLed); // 注意长度改为6
+  35   1          MySTC_Init();
+  36   1          
+  37   1          while(1){
+  38   2              MySTC_OS();
+  39   2          }
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =     34    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.51   MAIN                                                                  07/03/2025 10:33:31 PAGE 2   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
